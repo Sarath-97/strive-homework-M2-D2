@@ -9,8 +9,9 @@
     <!-- IMPORT ALL THE BOOTSTRAP RELATED CSS & SCRIPTS-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
         integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
-
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Odibee+Sans&display=swap" rel="stylesheet">
     <style>
         /* EXERCISE 1
             For every Album we'd like to have a consistent style.
@@ -25,18 +26,44 @@
 
             to make sure you give every album the same consistent appearance.
          */
+        html{
+            scroll-behavior: smooth;
+        }
         body {
             background-color: black;
         }
 
         h1 {
+            font-family: 'Odibee Sans', cursive;
+            font-size: 4em;
             text-align: center;
+            text-transform: capitalize;
             color: white;
+        }
+        .card-header{
+            
+            font-size: 2em;
+            font-family: 'Odibee Sans', cursive;
+            text-transform: capitalize;
+            color: white;
+            background-color: rgba(0, 0, 0, 0.76);
+            
         }
 
         .container {
             margin-top: 20px;
         }
+
+        .parallax {
+  /* The image used */
+  background-image: url("images/parallax.jpg");
+  
+  min-height: 500px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
     </style>
 </head>
 
@@ -48,12 +75,8 @@
         integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous">
     </script>
 
-    <!-- <header>
-        <h1>My Top Albums</h1>
-    </header> -->
-
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">My Website</a>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <a class="navbar-brand" href="#"><i class="bi bi-music-note-list"></i></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -76,15 +99,16 @@
         </div>
     </nav>
 
+    <div class="parallax"></div>
     <div class="container">
 
-        <h1 id="hall-of-fame">Hall Of Fame</h1>
-        <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4">
+        <h1 id="hall-of-fame">hall of fame</h1>
+        <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 my-5">
             <div class="col mb-4">
                 <div class="card">
-                    <img src="https://tinyurl.com/3sa7hak5" class="card-img-top" alt="...">
+                    <img src="https://tinyurl.com/3sa7hak5" class="card-img-top" alt="album cover">
                     <div class="card-header">
-                        Made in The Pyrex
+                        made in the pyrex
                     </div>
                     <ul class="list-group list-group-flush">
                         <li class="list-group-item">Digga D</li>
@@ -95,40 +119,40 @@
             </div>
             <div class="col mb-4">
                 <div class="card">
-                    <img src="https://picsum.photos/200" class="card-img-top" alt="...">
+                    <img src="https://bit.ly/34DW0gj" class="card-img-top" alt="album cover">
                     <div class="card-header">
-                        title
+                        rise above hate
                     </div>
                     <ul class="list-group list-group-flush">
-                        <li class="list-group-item">singer</li>
-                        <li class="list-group-item">genre</li>
-                        <li class="list-group-item">Duration</li>
+                        <li class="list-group-item">Unknown T</li>
+                        <li class="list-group-item">UK rap</li>
+                        <li class="list-group-item">44 min 34 sec</li>
                     </ul>
                 </div>
             </div>
             <div class="col mb-4">
                 <div class="card">
-                    <img src="https://picsum.photos/200" class="card-img-top" alt="...">
+                    <img src="https://bit.ly/2RfzszB" class="card-img-top" alt="album cover">
                     <div class="card-header">
-                        title
+                        Views
                     </div>
                     <ul class="list-group list-group-flush">
-                        <li class="list-group-item">singer</li>
-                        <li class="list-group-item">genre</li>
-                        <li class="list-group-item">Duration</li>
+                        <li class="list-group-item">Drake</li>
+                        <li class="list-group-item">Hip-Hop</li>
+                        <li class="list-group-item">1 hr 21 min</li>
                     </ul>
                 </div>
             </div>
             <div class="col mb-4">
                 <div class="card">
-                    <img src="https://picsum.photos/200" class="card-img-top" alt="...">
+                    <img src="https://bit.ly/3ibOCRy" class="card-img-top" alt="...">
                     <div class="card-header">
-                        title
+                        i am > i was
                     </div>
                     <ul class="list-group list-group-flush">
-                        <li class="list-group-item">singer</li>
-                        <li class="list-group-item">genre</li>
-                        <li class="list-group-item">Duration</li>
+                        <li class="list-group-item">21 Savage</li>
+                        <li class="list-group-item">Hip-Hop</li>
+                        <li class="list-group-item">55 mins</li>
                     </ul>
                 </div>
             </div>
@@ -138,8 +162,8 @@
 
     <div id="worst-album" class="container">
 
-        <h1 id="hall-of-shame">Hall Of shame</h1>
-        <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4">
+        <h1 id="hall-of-shame">hall of shame</h1>
+        <div class="row row-cols-2 my-5 ">
             <div class="col mb-4">
                 <div class="card">
                     <img src="https://tinyurl.com/4u5xkd4w" class="card-img-top" alt="...">
@@ -150,32 +174,6 @@
                         <li class="list-group-item">The Weekend</li>
                         <li class="list-group-item">R&B/Soul</li>
                         <li class="list-group-item">56min 17sec</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col mb-4">
-                <div class="card">
-                    <img src="https://picsum.photos/200" class="card-img-top" alt="...">
-                    <div class="card-header">
-                        title
-                    </div>
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item">singer</li>
-                        <li class="list-group-item">genre</li>
-                        <li class="list-group-item">Duration</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col mb-4">
-                <div class="card">
-                    <img src="https://picsum.photos/200" class="card-img-top" alt="...">
-                    <div class="card-header">
-                        title
-                    </div>
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item">singer</li>
-                        <li class="list-group-item">genre</li>
-                        <li class="list-group-item">Duration</li>
                     </ul>
                 </div>
             </div>
@@ -220,26 +218,25 @@
     <footer class="bg-dark text-center text-white">
         <!-- Grid container -->
         <div class="container p-4 pb-0">
-          <!-- Section: Social media -->
-          <section class="mb-4">
-            <!-- Linkedin -->
-            <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
-              ><i class="fab fa-linkedin-in"></i
-            ></a>
-      
-            <!-- Github -->
-            <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
-              ><i class="fab fa-github"></i
-            ></a>
-          </section>
+            <!-- Section: Social media -->
+            <section class="mb-4">
+                <!-- Linkedin -->
+                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
+                        class="bi bi-linkedin"></i></i></a>
+
+                <!-- Github -->
+                <a class="btn btn-outline-light btn-floating m-1" href="https://github.com/Sarath-97" role="button">
+                    <i class="bi bi-github"></i></a>
+            </section>
         </div>
-      
-        <!-- Copyright -->
+
+
+
         <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-          © 2021 Copyright: Sarath Kumar
+            &copy 2021 Copyright: Sarath Kumar
         </div>
-        <!-- Copyright -->
-      </footer>
+
+    </footer>
 
     <!-- EXERCISE 2 
             Implement a navigation bar using the bootstrap component
